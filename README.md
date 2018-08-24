@@ -44,6 +44,10 @@ User.where(github: 'schneems').present?
 
 It monkeypatches `ActiveRecord::Relation` to alias `blank?` to `empty?`.
 
+## Caveats
+
+[We're not entirely sure if this is always a good idea or not, and it may cause extra queries](https://github.com/rails/rails/issues/29400#issuecomment-307782895).
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
