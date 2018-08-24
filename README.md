@@ -2,6 +2,12 @@
 
 Speed up your Active Record query performance by not loading Active Record objects when calling `present?`. Inspired by [this tweet thread](https://twitter.com/nateberkopec/status/1032678576535957506).
 
+## Wait? Why not Commit to Rails? You have Commit right?
+
+While this change is astoundingly small (in code terms) it might not be a good fit for 100% of apps (see the caveats section). This was already [discussed](https://github.com/rails/rails/issues/29400) then [committed](https://github.com/rails/rails/pull/10539) and eventually removed from the Rails codebase.
+
+If this gem has legs and lots of people like it then it's a good proxy for a test run of changing the default rails behavior. If everyone hates it, then no harm, remove the gem from your Gemfile.
+
 ## Installation
 
 Add this line to your application's Gemfile:
