@@ -1,11 +1,14 @@
-require "test_helper"
+require 'test_helper'
 
-class AttendanceTest < Minitest::Test
-  def test_that_it_has_a_version_number
-    refute_nil ::Attendance::VERSION
+class Attendance::Test < ActiveSupport::TestCase
+  setup do
+    u = User.where(name: "schneems").first_or_create
+    assert_equal true, u.save
   end
 
-  def test_it_does_something_useful
-    assert true
+  test "monkey patches present?" do
+    user = User.where(name: "schneems", email: nil)
+    assert_equal true,  user.present?
+    assert_equal false, !!user.loaded?
   end
 end
