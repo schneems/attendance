@@ -26,7 +26,7 @@ Or install it yourself as:
 
 ## Usage
 
-That's it. Now when you call `present?` on an `ActiveRecord::Relation` object it will not load it into memory:
+That's it. Now when you call `present?` on an `ActiveRecord::Relation` or an `ActiveRecord::Associations::CollectionProxy` object, it will not load it into memory:
 
 Without attendance:
 
@@ -48,7 +48,7 @@ User.where(github: 'schneems').present?
 
 ## How does this Gem Work?
 
-It monkeypatches `ActiveRecord::Relation` to alias `blank?` to `empty?`.
+It monkeypatches `ActiveRecord::Relation` and `ActiveRecord::Associations::CollectionProxy` to alias `blank?` to `empty?`.
 
 ## Caveats
 
