@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    attendance (0.1.0)
+    attendance (0.1.1)
       activerecord (>= 4)
 
 GEM
@@ -128,4 +128,4 @@ DEPENDENCIES
   sqlite3
 
 BUNDLED WITH
-   1.16.2
+   1.17.2
